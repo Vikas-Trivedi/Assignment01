@@ -8,21 +8,22 @@ router.get('/', function(req, res, next) {
 
 /* GET About me page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About Me' });
+  res.render('about', { title: 'About Me' });
 });
 
 /* GET Projects page. */
 router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects' });
+  res.render('projects', { title: 'Projects' });
 });
 
 /* GET Service page. */
 router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
+  res.render('services', { title: 'Services' });
 });
-/* GET Projects page. */
+
+/* GET Contact Me page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Me' });
+  res.render('contact', { title: 'Contact Me' });
 });
 
 module.exports = router;
