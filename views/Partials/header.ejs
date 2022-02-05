@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+</head>
+<body style="background-color: gray;">
+  <!-- Main Nav bar  -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo.png" alt="logo" style="width:60px;">
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <% if (title == "Home") { %>
+            <a class="nav-link active" href="/">
+        <% } else { %>
+            <a class="nav-link" href="/">
+        <% } %>            
+            <i class="fas fa-home"></i> Home </a>
+        </a>
+      </li>
+      <li class="nav-item">
+        <% if (title == "About Me") { %>
+            <a class="nav-link active" href="/about">
+        <% } else { %>
+            <a class="nav-link" href="/about">
+        <% } %>            
+            <i class="fas fa-user"></i> About </a>
+        </a>
+      </li>
+      <li class="nav-item">
+        <% if (title == "Projects") { %>
+            <a class="nav-link active" href="/projects">
+        <% } else { %>
+            <a class="nav-link" href="/projects">
+        <% } %>            
+        <i class="fas fa-desktop"></i> Projects </a>
+        </a>
+      </li>
+      <li class="nav-item">
+        <% if (title == "Services") { %>
+            <a class="nav-link active" href="/services">
+        <% } else { %>
+            <a class="nav-link" href="/services">
+        <% } %>            
+            <i class="fas fa-concierge-bell"></i> Services </a>
+        </a>
+      </li>
+      <li class="nav-item">
+        <% if (title == "Contact Me") { %>
+            <a class="nav-link active" href="/contact">
+        <% } else { %>
+            <a class="nav-link" href="/contact">
+        <% } %>            
+            <i class="fas fa-phone-alt"></i> Contact Me </a>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
