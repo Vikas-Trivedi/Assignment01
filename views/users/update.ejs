@@ -1,0 +1,87 @@
+<% include ../Partials/header.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <center><h1><%= title %></h1></center>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= user._id %>"
+                    >
+                    <label for="userTextField">Username*</label>
+                    <input type="text" class="form-control"
+                        id="userTextField"
+                        placeholder="Enter Username"
+                        name="username" 
+                        value="<%= user.username %>"
+                        required>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="userTextField">First Name*</label>
+                    <input type="text" class="form-control"
+                        id="userTextField"
+                        placeholder="Enter your Name"
+                        name="name" 
+                        value="<%= user.firstName %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="userTextField">Last Name*</label>
+                    <input type="text" class="form-control"
+                        id="userTextField"
+                        placeholder="Enter your Name"
+                        name="name" 
+                        value="<%= user.lastName %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="emailTextField">E-Mail*</label>
+                    <input type="text" class="form-control"
+                        id="emailTextField"
+                        placeholder="Enter your E-Mail Id"
+                        name="email" 
+                        value="<%= user.email %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="userTextField">Phone No.*</label>
+                    <input type="text" class="form-control"
+                        id="userTextField"
+                        placeholder="Enter your phone number"
+                        name="phone" 
+                        value="<%= user.phone %>"
+                        required>
+                </div>
+                <br/>
+                <div>
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-edit"></i> 
+                        Submit
+                    </button>
+    
+                    <a href="/users/delete/<%= user._id %>" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                        Delete
+                    </a> 
+                    
+                    <a href="/users/business_contacts" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> 
+                        Cancel
+                    </a>
+                </div>
+            </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<% include ../Partials/footer_fixed.ejs %>
