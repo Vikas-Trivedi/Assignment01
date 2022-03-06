@@ -1,0 +1,46 @@
+<% include ../Partials/header.ejs %>
+
+
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+        <center><h1><%= title %></h1></center>
+        <br>
+        <br>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Contact Name</th>
+                    <th class="text-center">Contact Number</th>
+                    <th class="text-center">Email Address</th>                    
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < users.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= users[count].fullName %></td>
+                        <td class="text-center"><%= users[count].phone %></td>
+                        <td class="text-center"><%= users[count].email %></td>
+                        
+                        
+                        <td class="text-center">
+                            <a href="/users/update/<%= users[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/users/delete/<%= users[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+
+
+<% include ../Partials/footer_fixed.ejs %>
